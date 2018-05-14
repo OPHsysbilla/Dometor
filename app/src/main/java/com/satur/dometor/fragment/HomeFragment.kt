@@ -9,7 +9,6 @@ import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
 import com.orhanobut.logger.Logger
 import com.satur.dometor.R
-import com.satur.dometor.R.id.mRefreshLayout
 import com.satur.dometor.base.BaseFragment
 import com.satur.dometor.mvp.contract.HomeContract
 import com.satur.dometor.mvp.model.bean.HomeBean
@@ -129,11 +128,11 @@ class HomeFragment : BaseFragment(), HomeContract.View {
 
     fun setBanner(bannerImageList: ArrayList<String>, bannerTitleList: ArrayList<String>) {
         //设置 banner
-        Logger.d(bannerImageList)
-        Logger.d(bannerTitleList)
-        home_banner.setAutoPlayAble(bannerImageList.size > 1)
-        home_banner.setData(bannerImageList, bannerTitleList)
-        home_banner.setAdapter(object : BGABanner.Adapter<ImageView, String> {
+//        Logger.d(bannerImageList)
+//        Logger.d(bannerTitleList)
+        goods_banner.setAutoPlayAble(bannerImageList.size > 1)
+        goods_banner.setData(bannerImageList, bannerTitleList)
+        goods_banner.setAdapter(object : BGABanner.Adapter<ImageView, String> {
             override fun fillBannerItem(bgaBanner: BGABanner?, imageView: ImageView?, feedImageUrl: String?, position: Int) {
                 Glide.with(activity as Context)
                         .load(feedImageUrl)
@@ -144,8 +143,7 @@ class HomeFragment : BaseFragment(), HomeContract.View {
         })
         //没有使用到的参数在 kotlin 中用"_"代替
 //        home_banner.setDelegate { _, imageView, _, i ->
-////            goToVideoPlayer(mContext as Activity, imageView, bannerItemData[i])
-//
+////            switch(i){}
 //        }
 
     }

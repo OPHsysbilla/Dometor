@@ -66,4 +66,7 @@ dependencies {
 
     //运行时权限
     implementation 'me.weyye.hipermission:library:1.0.7'
+
+    //底部弹出框 （包括分享与加入购物车所需要的Diaglog）
+    implementation 'me.shaohui:bottomdialog:1.1.9'
 }

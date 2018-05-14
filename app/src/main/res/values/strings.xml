@@ -39,6 +39,14 @@
     <string name="normal_price">￥%1$.2f</string>
     <string name="vip_price">￥%1$.2f</string>
     <string name="goods_cnt">月销 %1$d 件</string>
+    <string name="available_cnt">库存 %1$d 件</string>
+    <string name="temp_detail">
+如何避免？
+
+如果您使用私人电脑，可以下载杀毒软件，进行全盘扫描保证没有中毒。
+
+如果您使用公用电脑，可以请网络管理员修正配置选项或查找病毒来源。
+    </string>
 
 
     <string name="copy_right_notice">内容部分数据归DangDang版权所有</string>

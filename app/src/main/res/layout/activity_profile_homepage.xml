@@ -59,7 +59,7 @@
                             android:orientation="vertical">
 
                             <RelativeLayout
-                                android:id="@+id/panel"
+                                android:id="@+id/goods_panel"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentBottom="true"
@@ -100,7 +100,7 @@
                                     android:textColor="@color/colorPrimaryDark" />
 
                                 <TextView
-                                    android:id="@+id/nickname"
+                                    android:id="@+id/goods_title"
                                     style="@style/AppTheme.Label.Title"
                                     android:layout_below="@id/attention"
                                     android:gravity="center_horizontal"
@@ -110,7 +110,7 @@
                                     android:id="@+id/relationship"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
-                                    android:layout_below="@id/nickname"
+                                    android:layout_below="@id/goods_title"
                                     android:layout_marginTop="@dimen/padding_common">
 
                                     <TextView

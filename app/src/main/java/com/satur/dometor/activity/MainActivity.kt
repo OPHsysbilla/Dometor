@@ -135,7 +135,7 @@ class MainActivity : BaseActivity() {
     /* 不调用super.onSaveInstance..()，不保存状态，每次都重新引用新Fragment */
     @SuppressLint("MissingSuperCall")
     override fun onSaveInstanceState(outState: Bundle) {
-        showToast("onSaveInstanceState->" + mIndex)
+//        showToast("onSaveInstanceState->" + mIndex)
 //        super.onSaveInstanceState(outState)
         //记录fragment的位置,防止崩溃 activity被系统回收时，fragment错乱
         if (tab_layout != null) {

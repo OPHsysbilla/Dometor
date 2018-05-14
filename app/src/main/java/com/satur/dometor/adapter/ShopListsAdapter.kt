@@ -1,6 +1,8 @@
 package com.satur.dometor.adapter
 
+import android.app.Activity
 import android.content.Context
+import android.content.Intent
 import android.graphics.Paint
 import android.view.View
 import android.view.ViewGroup
@@ -8,7 +10,9 @@ import android.widget.ImageView
 import android.widget.TextView
 import com.bumptech.glide.Glide
 import com.bumptech.glide.load.resource.drawable.DrawableTransitionOptions
+import com.satur.dometor.Constants
 import com.satur.dometor.R
+import com.satur.dometor.activity.GoodsDetailActivity
 import com.satur.dometor.mvp.model.bean.ShopListsBean
 import com.satur.dometor.view.recyclerview.ViewHolder
 import com.satur.dometor.view.recyclerview.adapter.CommonAdapter
@@ -74,6 +78,9 @@ class ShopListsAdapter(context: Context, data: ArrayList<ShopListsBean.Goods>)
                     }
 
                 })
+                holder.setOnItemClickListener(listener = View.OnClickListener {
+                    gotoGoodsDetail(mContext as Activity, mData[position])
+                })
 
 
             }
@@ -99,5 +106,10 @@ class ShopListsAdapter(context: Context, data: ArrayList<ShopListsBean.Goods>)
         return view!!
     }
 
-
+    private fun gotoGoodsDetail(activity: Activity, itemData: ShopListsBean.Goods) {
+        val intent = Intent(activity, GoodsDetailActivity::class.java)
+        intent.putExtra(Constants.BUNDLE_GOODS_DETAIL, itemData)
+        activity.startActivity(intent)
+        activity.overridePendingTransition(R.anim.anim_in, R.anim.anim_out)
+    }
 }

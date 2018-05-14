@@ -28,7 +28,7 @@ import java.io.Serializable
 	}],
 	"size": 103
 }*/
-data class ShopListsBean(val server_time: Long, val goods_list: ArrayList<Goods>, val opt_infos: ArrayList<OptInfo>, val flip: String, val debugInfo: Any?) {
+data class ShopListsBean(val server_time: Long, val goods_list: ArrayList<Goods>, val opt_infos: ArrayList<OptInfo>, val flip: String, val debugInfo: Any?) : Serializable {
     data class Goods(val goods_id: Long, val goods_name: String, val icon: Icon,
                      val short_name: String, val image_url: String, val thumb_url: String,
                      val hd_thumb_wm: String, val image_wm: String, val event_type: Int,

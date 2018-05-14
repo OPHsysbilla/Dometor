@@ -127,6 +127,7 @@ class RecycleListFragment : BaseFragment(), ShopListsContract.View {
 
     override fun lazyLoad() {
         mPresenter.requestShopListData(typeNum)
+
     }
 
 
@@ -155,7 +156,7 @@ class RecycleListFragment : BaseFragment(), ShopListsContract.View {
         Logger.d(shopListsBean)
 //        (mRVShopLists.adapter as ShopListsAdapter).addItemData(shopListsBean.goods_list)
         mShopListsAdapter?.addItemData(shopListsBean.goods_list)
-
+        if (mShopListsAdapter?.itemCount == 0) showError("该分类没有数据", ErrorStatus.UNKNOWN_ERROR)
 
     }
 

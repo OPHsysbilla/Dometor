@@ -37,6 +37,12 @@
         <activity
             android:name=".activity.MainActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.GoodsDetailActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".activity.ProfileHomePageActivity"
+            android:screenOrientation="portrait" />
 
     </application>
 

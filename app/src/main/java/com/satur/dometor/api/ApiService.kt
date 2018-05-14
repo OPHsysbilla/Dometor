@@ -24,10 +24,11 @@ interface ApiService {
             @Query("size") size: Int,
             @Query("opt_type") opt_type: Int = 1): Observable<ShopListsBean>
 
+
     /**
      * 首页精选
      */
-    @GET("v2/home")
+    @GET("v2/home")     /* 随机网址，需要修改 */
     fun getHomeData(): Observable<HomeBean>
 
     /**
@@ -36,14 +37,21 @@ interface ApiService {
     /**
      * 获取全部排行榜的Info（包括，title 和 Url）
      */
-    @GET("v4/goodscategory")
+    @GET("v4/goodscategory")     /* 随机网址，需要修改 */
     fun getGoodsCategoryList(): Observable<TabInfoBean>
 
     /**
      * 作者信息
      */
-    @GET("v4/pgcs/detail/tab?")
+    @GET("v4/pgcs/detail/tab?")     /* 随机网址，需要修改 */
     fun getAuthorInfo(@Query("id") id: Long): Observable<AuthorInfoBean>
+
+    /**
+     * 作者信息
+     */
+    @GET("v4/pgcs/detail")     /* 随机网址，需要修改 */
+    fun getGoodsDetail(@Query("id") id: Long): Observable<ShopListsBean.Goods>
+
 
 
 }

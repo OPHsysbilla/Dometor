@@ -65,8 +65,6 @@ class ShopFragment : BaseFragment(), HotTabContract.View {
         //状态栏透明和间距处理
 //        StatusBarUtil.darkMode(activity as Activity)
 //        StatusBarUtil.setPaddingSmart(activity as Activity, toolbar)
-//        activity?.let { StatusBarUtil.darkMode(it) }
-//        activity?.let { StatusBarUtil.setPaddingSmart(it, toolbar) }
     }
 
     private fun openSearchActivity() {
