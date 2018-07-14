@@ -156,7 +156,7 @@ class RecycleListFragment : BaseFragment(), ShopListsContract.View {
         Logger.d(shopListsBean)
 //        (mRVShopLists.adapter as ShopListsAdapter).addItemData(shopListsBean.goods_list)
         mShopListsAdapter?.addItemData(shopListsBean.goods_list)
-        if (mShopListsAdapter?.itemCount == 0) showError("该分类没有数据", ErrorStatus.UNKNOWN_ERROR)
+        if (mShopListsAdapter?.itemCount == 0) showError("该分类没有数据", ErrorStatus.EMPTY_DATA)
 
     }
 
@@ -172,8 +172,11 @@ class RecycleListFragment : BaseFragment(), ShopListsContract.View {
         showToast(msg)
         if (errorCode == ErrorStatus.NETWORK_ERROR) {
             mLayoutStatusView?.showNoNetwork()
-        } else {
+        } else if(errorCode == ErrorStatus.EMPTY_DATA){
+            mLayoutStatusView?.showEmpty()
+        }else{
             mLayoutStatusView?.showError()
+
         }
     }
 

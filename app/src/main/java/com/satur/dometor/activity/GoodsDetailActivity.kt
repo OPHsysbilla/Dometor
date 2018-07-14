@@ -120,7 +120,7 @@ class GoodsDetailActivity : BaseActivity(), GoodsDetailContract.View {
         itemData = itemInfo
 
         /* 文本绑定 */
-        goods_place.text = "" + itemData.country
+        goods_place.text =  itemData.country?:"中国"
         goods_detail.text = "" + itemData.goods_name
         goods_name.text = "" + itemData.goods_name
         tv_normal_price.text = "" + String.format(normalPriceFormat, itemData.normal_price / 100f

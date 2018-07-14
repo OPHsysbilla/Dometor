@@ -34,5 +34,10 @@ object ErrorStatus {
      */
     @JvmField
     val API_ERROR = 1005
+    /**
+     * API解析异常（或者第三方数据结构更改）等其他异常
+     */
+    @JvmField
+    val EMPTY_DATA = 1006
 
 }
